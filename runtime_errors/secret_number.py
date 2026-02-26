@@ -9,7 +9,10 @@ pwd = input("What's the secret number? ") # User Input
 
 print()         # Skip Line
 
-if pwd == 333:  # Check authentication
+if not isdigit(pwd):
+    print("That is not a number !!")
+
+if int(pwd) == 333:  # Check authentication
     print("Success! Opening RESTRICTED APP...")
 else:
     print("That's the wrong number.")
